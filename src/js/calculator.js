@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Format number with commas
     function formatNumber(num) {
-        if (num === "Infinity" || num === "-Infinity") return num;
+        if (num === "Infinity") return '∞'; 
+        if (   num === "-Infinity") return '-∞';
         const parts = num.toString().split('.');
         parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
         return parts.join('.');
